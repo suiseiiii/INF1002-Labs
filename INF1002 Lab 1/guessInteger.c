@@ -63,10 +63,10 @@ int main()
 
     // loops until valid number (between 1 and 1000) is entered
     while (1) {
-        printf("Player 1, enter a number between %d and %d:", MIN, MAX);
+        printf("Player 1, enter a number between %d and %d:\n", MIN, MAX);
         scanf("%d", &number);
 
-        if (number > MIN && number < MAX) {
+        if (number >= MIN && number <= MAX) {
             break;
         } else{
             printf("That number is out of range.\n");
@@ -78,7 +78,7 @@ int main()
         if (check == true) {
             printf("Player 2, you have %d guesses remaining.\n", att);
         }
-        printf("Enter your guess:");
+        printf("Enter your guess:\n");
         scanf("%d", &guess);
 
         if (guess < MIN || guess > MAX) {
